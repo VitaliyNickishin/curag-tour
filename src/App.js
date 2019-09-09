@@ -2,10 +2,12 @@ import React from 'react';
 import './App.css';
 import {Route, Switch} from 'react-router-dom'
 import Navbars from './components/Navbar/Navbars'
+import CarouselSider from './components/CarouselSider/CarouselSider';
 
 function App() {
   return (
     <div className="App">
+      <CarouselSider />
       <Navbars />
       <Switch>
         {/* <Route exact path="/" component={Главная} />
