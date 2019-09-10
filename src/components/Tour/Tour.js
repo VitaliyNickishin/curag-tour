@@ -23,7 +23,7 @@ export default class Tour extends Component {
       <sup>{person}</sup>
      </div>
      <Link to='/' className='tour-btn'>
-      <i className="fas fa-chevron-right"></i>
+      <i className="fas fa-chevron-right arrow-right"></i>
      </Link>
    </article>
   )
