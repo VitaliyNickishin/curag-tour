@@ -1,11 +1,11 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import {Link} from 'react-router-dom'
 import ImgFirst from '../../img/header/1.png'
 import ImgSecond from '../../img/header/2.png'
 import ImgThird from '../../img/header/3.png'
 import './CarouselSider.sass'
 import Button from '../Button/Button'
+import BgBunner from '../BgBunner/BgBunner'
 
 export default function CarouselSider() {
  return (
@@ -17,6 +17,7 @@ export default function CarouselSider() {
       alt="First slide"
     />
     <Carousel.Caption>
+    <BgBunner />
       <h3>Лучшие предложения по солнечному Египту из Харькова</h3>
       <Button />
     </Carousel.Caption>
@@ -29,6 +30,7 @@ export default function CarouselSider() {
     />
 
     <Carousel.Caption>
+    <BgBunner />
       <h3>Second slide label</h3>
       <Button />
     </Carousel.Caption>
@@ -41,6 +43,7 @@ export default function CarouselSider() {
     />
 
     <Carousel.Caption>
+    <BgBunner />
       <h3>Third slide label</h3>
       <Button />
     </Carousel.Caption>
