@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 import Navbars from './components/Navbar/Navbars';
 import CarouselSider from './components/CarouselSider/CarouselSider';
 import SliderTour from './components/SliderTour/SliderTour';
+import Benefits from './components/Benefits/Benefits'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <CarouselSider />
       <Navbars />
       <SliderTour/>
+      <Benefits/>
       <Switch>
         {/* <Route exact path="/" component={Главная} />
         <Route exact path="/туры" component={Туры} />
