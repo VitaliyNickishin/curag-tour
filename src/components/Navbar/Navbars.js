@@ -22,7 +22,7 @@ export default function Navbars() {
      {/* <Col lg={{span:8, offset: 2}} md={{span:9, offset: 0}} sm={8}> */}
    <Navbar collapseOnSelect expand="lg" className="navbars">
     <Link to="/">
-     <img src={logo} alt="Beach Resort"/>
+     <img src={logo} alt="logo"/>
     </Link>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">

@@ -6,6 +6,7 @@ import CarouselSider from './components/CarouselSider/CarouselSider';
 import SliderTour from './components/SliderTour/SliderTour';
 import Benefits from './components/Benefits/Benefits'
 import Offer from './components/Offer/Offer'
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <SliderTour/>
       <Benefits/>
       <Offer/>
+      <Footer/>
       <Switch>
         {/* <Route exact path="/" component={Главная} />
         <Route exact path="/туры" component={Туры} />
