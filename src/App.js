@@ -5,6 +5,7 @@ import Navbars from './components/Navbar/Navbars';
 import CarouselSider from './components/CarouselSider/CarouselSider';
 import SliderTour from './components/SliderTour/SliderTour';
 import Benefits from './components/Benefits/Benefits'
+import Offer from './components/Offer/Offer'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbars />
       <SliderTour/>
       <Benefits/>
+      <Offer/>
       <Switch>
         {/* <Route exact path="/" component={Главная} />
         <Route exact path="/туры" component={Туры} />
