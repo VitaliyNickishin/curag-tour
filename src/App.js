@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {Route, Switch} from 'react-router-dom';
 import Navbars from './components/Navbar/Navbars';
 import CarouselSider from './components/CarouselSider/CarouselSider';
@@ -11,8 +10,9 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <CarouselSider />
+      
       <Navbars />
+      {/* <CarouselSider /> */}
       <SliderTour/>
       <Benefits/>
       <Offer/>

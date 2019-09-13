@@ -55,18 +55,18 @@ export default function Footer() {
     <Col lg={4} md={4} sm={12}>
     <Nav className="flex-column footer-nav">
       <h3>Контакты</h3>
-      <div className="location">
+      <div className="footer-location">
        <img src={location} alt="location"/>
        <span>г. Харьков, ул. Лермонтовская 10а</span>
       </div>
-      <div className="phone">
+      <div className="footer-phone">
        <img src={phone} alt="phone"/>
        <a href="tel:+380999908100">+38 (099) 990-81-00</a>
       </div>
       <div className="line"></div>
-      <div className="social">
-      <img src={fb} alt="fb"/>
-      <img src={inst} alt="inst"/>
+      <div className="footer-social">
+       <img src={fb} alt="fb"/>
+       <img src={inst} alt="inst"/>
       </div>
      </Nav>
     </Col>

@@ -10,16 +10,13 @@ import Container from 'react-bootstrap/Container'
 // import Col from 'react-bootstrap/Col'
 // import './Navbar.sass'
 import './Navbars.sass'
+import Contacts from '../Contacts/Contacts';
 
 
 export default function Navbars() {
  return (
   <Container>
-    {/* <Row> */}
-     {/* <Col lg={2} md={3} sm={4}> */}
-      
-     {/* </Col> */}
-     {/* <Col lg={{span:8, offset: 2}} md={{span:9, offset: 0}} sm={8}> */}
+    <Contacts/>
    <Navbar collapseOnSelect expand="lg" className="navbars">
     <Link to="/">
      <img src={logo} alt="logo"/>
