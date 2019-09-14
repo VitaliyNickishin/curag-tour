@@ -6,10 +6,11 @@ import SliderTour from './components/SliderTour/SliderTour';
 import Benefits from './components/Benefits/Benefits'
 import Offer from './components/Offer/Offer'
 import Footer from './components/Footer/Footer';
+import './index.sass'
 
 function App() {
   return (
-    <div className="App">
+    <div className="section">
       <Navbars />
       <CarouselSider />
       <SliderTour/>

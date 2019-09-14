@@ -39,8 +39,8 @@ export default function Benefits() {
        </Form.Control>
       </Form.Group>
       </Form> */}
-      <div class="scrollbar">
-       <div class="scrollbar-text">
+      <div className="scrollbar">
+       <div className="scrollbar-text">
         Очень долго подбирали разные варианты для того, 
         чтобы отпраздновать свой юбилейный День рождения 
         в путешествии и не могли определиться... Решили 
