@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import ImgFirst from '../../img/header/1.png'
-import ImgSecond from '../../img/header/2.png'
+import ImgSecond from '../../img/header/2.jpg'
 import ImgThird from '../../img/header/3.png'
 import './CarouselSider.sass'
 import Button from '../Button/Button'

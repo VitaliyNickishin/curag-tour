@@ -1,0 +1,69 @@
+@import '../../colors.sass'  
+
+.navbars
+ position: fixed
+ top: 53px
+ right: 12%
+ z-index: 999
+
+
+.navbar-collapse
+ margin-left: 288px
+ background-color: $mainYellow
+ max-width: 760px
+ min-height: 48px
+ border-radius: 10px
+ flex-grow: 0
+
+.nav-items
+ padding-left: 26px
+.nav-link
+ padding-right: 2.8rem !important
+ padding-left: 0 !important
+ font-size: 18px
+
+ 
+.navbar-light .navbar-nav .nav-link
+ color: $mainBlack
+
+.dropdown-toggle
+ &::after
+  // display: none
+ &:before
+  // content: ''
+  // position: absolute
+  // top: 0
+  // background-image: url ('../../img/icons/down.png')
+  // background-size: cover
+  // background-repeat: no-repeat
+  // width: 10px
+  // height: 10px
+
+ //под меню
+.dropdown-menu
+ background-color: $mainBlue
+ opacity: 0.8
+ text-wrap: wrap
+
+ //кнопка
+.navbar-toggler 
+ position: absolute
+ top: -40px
+ right: -50px
+ //пунуты подменю
+.dropdown-item
+ 
+ // padding: 15px
+ color: $mainWhite
+ // width: 239px
+@media screen and (min-width: 992px) 
+ .navbar-collapse
+  margin-left: 0
+  // width: 600px
+  top: 50px
+ .navbar-toggler
+  // top: -50px 
+@media screen and (min-width: 768px) 
+ .nav-link
+  // padding-right: 3.0rem !important
+  // padding-left: 0 !important

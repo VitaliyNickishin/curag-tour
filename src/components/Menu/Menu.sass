@@ -1,13 +1,16 @@
 @import '../../colors.sass' 
+@import '../../fonts.scss' 
 
-.navbars 
+.menu 
  position: fixed
- top: 0
- left: 0
+ top: 20%
+ right: 0
  width: 100%
- padding: 0.75rem 2rem
+ 
  z-index: 1
-
+.nav-center
+ // display: flex
+ // justify-content: space-between
 .nav-header 
  display: flex
  justify-content: space-between
@@ -23,6 +26,7 @@
  color: 
 
 .nav-links 
+ 
  height: 0
  overflow: hidden
  transition: all 0.3s linear
@@ -30,16 +34,15 @@
  background-color: $mainYellow
  border-radius: 10px
 
-.nav-links a 
+.nav-links a
+ padding: 16px 0 10px 
  display: block
  text-decoration: none
- padding: 1rem 0
- color: 
- transition: 
- text-align: center
- font-size: 1rem
- font-weight: 600
- letter-spacing:
+ // padding: 1rem 0
+ color: $mainBlack
+ transition: all 0.3s linear
+ font-size: 18px
+ +bold
 
 .nav-links a:hover 
  color: 
@@ -60,9 +63,9 @@
  .nav-links 
   height: auto
   display: flex
-  margin-left: 4rem
+  // margin-left: 4rem
  
  .nav-links a 
   margin: 0 1rem
-  padding: 0.5rem 0
+  // padding: 0.5rem 0
  

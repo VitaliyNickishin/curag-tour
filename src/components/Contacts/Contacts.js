@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import location from '../../img/icons/location.png'
 import phone from '../../img/icons/phone.png'
 import fb from '../../img/icons/facebook.png'
@@ -17,7 +18,10 @@ export default function Contacts() {
    <a href="tel:+380999908100">+38 (099) 990-81-00 (viber, telegram)</a>
   </div>
   <div className="contacts-social">
-   <img src={fb} alt="fb"/>
+   <Link>
+    <img src={fb} alt="fb"/>
+   </Link>
+   
    <img src={inst} alt="inst"/>
   </div>
   </div>
