@@ -1,7 +1,7 @@
 @import '../../colors.sass' 
+@import '../../fonts.scss' 
 
 .tour
- margin: 1rem 0
  display: flex
  width: 519px
  height: 202px
@@ -16,10 +16,10 @@
    height: 175px
  &-info
   text-align: left
-  padding: 25px 0 0 28px
+  padding: 25px 21px 0 28px
   h3
    font-size: 17px
-   color:
+   +bold 
   span
    color: #3a3a3a
   p
@@ -55,3 +55,25 @@
 
 .arrow-right
  color: $mainBlack 
+
+
+@media screen and (max-width: 590px) 
+ .tour
+  margin: 0 auto 10px
+  padding: 14px
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 338px
+  height: auto
+  &-img
+   padding: 0
+   img
+    
+  &-info
+   // text-align: center
+  &-btn
+   right: 55px
+   bottom: 13px
+   
+   

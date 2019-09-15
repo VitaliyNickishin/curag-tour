@@ -14,6 +14,7 @@ export default function MenuBsp() {
      <Nav className="nav-items ">
       <Nav.Link href="#home">Главная</Nav.Link>
        <NavDropdown title="Туры" id="collasible-nav-dropdown">
+        {/* <i className="fas fa-chevron-down arrow-down"></i> */}
         <NavDropdown.Item href="#action/3.1">Горящие туры</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Поиск тура</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Туры по Украине</NavDropdown.Item>

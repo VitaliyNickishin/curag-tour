@@ -3,9 +3,9 @@ import Carousel from 'react-bootstrap/Carousel'
 import ImgFirst from '../../img/header/1.png'
 import ImgSecond from '../../img/header/2.png'
 import ImgThird from '../../img/header/3.png'
-import './CarouselSider.sass'
 import Button from '../Button/Button'
 // import BgBunner from '../BgBunner/BgBunner'
+import './CarouselSider.sass'
 
 export default function CarouselSider() {
  return (

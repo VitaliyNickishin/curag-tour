@@ -11,8 +11,9 @@ import './index.sass'
 function App() {
   return (
     <div className="section">
-      <Navbars />
+      
       <CarouselSider />
+      <Navbars />
       <SliderTour/>
       <Benefits/>
       <Offer/>

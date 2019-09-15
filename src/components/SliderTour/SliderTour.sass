@@ -1,19 +1,63 @@
-@import '../../colors.sass'  
+@import '../../colors.sass'
+@import '../../fonts.scss'
+
 .slide-tour
  padding: 72px 0 
-.nav
- margin: 0 !important
- 
- li
-  a
-   font-size: 20px
-   color: $mainBlack
-   font-weight: 700
-  .active
-   color: $mainYellow 
+ &-nav
+  margin: 0 !important
+  padding-bottom: 70px
+  li
+   a
+    font-size: 20px
+    color: $mainBlack
+    +bold
+   .active
+    color: $mainYellow
 
+// контейнер для слайдера
 .slick-slider
-//  max-width: 1200px
+ max-width: 1727px
  margin: auto
+
 .slick-prev:before, .slick-next:before
  color: $mainBlack
+
+
+.slick-next
+ right: 30px
+
+@media screen and (max-width: 1800px) 
+ .slick-slider
+  max-width: 1625px
+ .slick-next
+  right: 0
+
+@media screen and (max-width: 1700px) 
+ .slick-slider
+  max-width: 1111px
+ .slick-next
+  right: 10px
+
+@media screen and (max-width: 1200px) 
+ .slick-slider
+  max-width: 520px
+ .slick-next
+  right: -23px
+
+@media screen and (max-width: 992px) 
+ .slide-tour
+  padding: 25px 0 
+  &-nav
+   padding-bottom: 30px
+
+@media screen and (max-width: 590px)
+ .slide-tour
+  padding: 20px 10px 70px 
+  &-nav
+   padding-bottom: 20px
+   li
+    a
+     font-size: 14px
+ .slick-slider
+  max-width: 519px
+ .slick-next

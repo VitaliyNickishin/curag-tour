@@ -16,54 +16,51 @@ export default class SliderTour extends Component {
   const {tours} = this.state;
 
   let settings = {
-   arrows: true,
+			arrows: true,
    dots: false,
    infinite: true,
    speed: 500,
    slidesToShow: 3,
-   slidesToScroll: 1,
+			slidesToScroll: 1,
    responsive: [
     {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: false,
-        arrows: false
-      }
-    },
-    {
-      breakpoint: 600,
+      breakpoint: 1700,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
-        arrows: false
+        slidesToScroll: 1,
+								// dotsClass: 'slick-dots slick-slider__dots',
+        arrows: true
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 1200,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false
+        arrows: true
+						}
+					},
+    	{
+      breakpoint: 590,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+								arrows: false,
+								dots: true
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
  };
   return (
-    <section className="slide-tour">
+  <section className="slide-tour">
    <Container>
-    <Nav defaultActiveKey="/home" as="ul" className="nav">
-      <Nav.Item as="li">
-        <Nav.Link href="/home" className="active">Горящие туры</Nav.Link>
-      </Nav.Item>
-      <Nav.Item as="li">
-        <Nav.Link eventKey="link-1">Популярные туры</Nav.Link>
-      </Nav.Item>
+    <Nav defaultActiveKey="/home" as="ul" className="nav slide-tour-nav">
+     <Nav.Item as="li">
+      <Nav.Link href="/home" className="active">Горящие туры</Nav.Link>
+     </Nav.Item>
+     <Nav.Item as="li">
+      <Nav.Link eventKey="link-1">Популярные туры</Nav.Link>
+     </Nav.Item>
     </Nav>
    </Container>
    <div className="tourlist">

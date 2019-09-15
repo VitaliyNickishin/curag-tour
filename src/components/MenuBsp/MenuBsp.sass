@@ -39,6 +39,10 @@
   // width: 10px
   // height: 10px
 
+ // .arrow-down
+ //  position: absolute
+ //  top: 0
+ 
  //под меню
 .dropdown-menu
  background-color: $mainBlue
@@ -63,7 +67,29 @@
   top: 50px
  .navbar-toggler
   // top: -50px 
-@media screen and (min-width: 768px) 
+@media screen and (max-width: 768px) 
  .nav-link
+  font-size: 14px
   // padding-right: 3.0rem !important
   // padding-left: 0 !important
+ .dropdown-menu
+  font-size: 14px
+  background-color: transparent
+  color: $mainBlue
+  border: 0
+
+@media screen and (max-width: 576px) 
+ .nav-link
+  font-size: 10px
+ .dropdown-menu
+  font-size: 10px
+ .nav-items
+  padding-left: 10px
+ .navbar-toggler
+  padding: 5px
+  font-size: 15px
+  right: -30px
+  background-color: $mainYellow
+@media screen and (max-width: 425px) 
+ .navbar-toggler
+  font-size: 11px

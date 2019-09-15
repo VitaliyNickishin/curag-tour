@@ -13,32 +13,15 @@ export default function Benefits() {
    <Container>
     <Title title="Наши преимущества" />
     <Row noGutters>
-     <Col lg={5}>
-     <div className="img-container">
+     <Col lg={5} md={12}>
+     <div className="benefits-img">
       <img
        src={diving} 
        alt=""
       />
      </div>
      </Col>
-     <Col lg={7}>
-     {/* <Form>
-      <Form.Group controlId="exampleForm.ControlTextarea1">
-       <Form.Label></Form.Label>
-       <Form.Control as="textarea" rows="8" className="textarea">
-        Очень долго подбирали разные варианты для того, 
-        чтобы отпраздновать свой юбилейный День рождения 
-        в путешествии и не могли определиться... Решили 
-        обратиться за помощью в турагенство. Гульнара, 
-        выслушав все пожелания, предложила отдых в Турции,
-        отель Justiniano Club Park Conti 5* в Окурджалар 
-        возле Аланьи. Мы очень благодарны ей за
-        предложенный вариант!!!! Отдых получился отличный!
-        Отель с большой ухоженной территорией, внимательный
-        обслуживающий персонал. Отличный номер с видом на море. 
-       </Form.Control>
-      </Form.Group>
-      </Form> */}
+     <Col lg={7} md={12}>
       <div className="scrollbar">
        <div className="scrollbar-text">
         Очень долго подбирали разные варианты для того, 
@@ -56,7 +39,6 @@ export default function Benefits() {
      </Col>
     </Row>
    </Container>
-   
   </section>
  )
 }
