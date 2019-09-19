@@ -6,6 +6,8 @@ export default class Tour extends Component {
  
  render() {
   const {img,title,date,info,price,person} = this.props.item
+  console.log({img});
+  
   return (
    <article className="tour">
     <div className="tour-img">

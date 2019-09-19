@@ -1,12 +1,12 @@
 export const tourData = [
  {
    id: 1,
-   img: "./img/tours/1.png",
+   img: "img/tours/1.png",
    title: "8 марта в Cyrene Sharm hotel",
    date: "(12.03.2019-19.03.2019)",
    info:
      "Перелет, питание по системе all inclusive, трансфер",
-   price: "1259 грн",
+   price: "1300 грн",
    person: "/за 1 человека"
  },
  {

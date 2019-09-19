@@ -1,0 +1,79 @@
+@import '../../colors.sass' 
+
+.form
+ position: relative
+ z-index: 1
+ &:after
+  content: ''
+  width: 1139px
+  height: 131px
+  background-color: #000
+  opacity: 0.6
+  position: absolute
+  bottom: -43px
+  left: 0
+  z-index: -1
+ &__btn
+  margin-left: 20px
+ &-group
+  margin-bottom: 0
+
+ &-control
+  margin-left: 30px
+  border: none
+  border-bottom: 1px solid #495057
+  border-radius: 0
+  // opacity: 0.4
+  background-color: transparent 
+  width: 183px 
+  &:focus
+   color: $mainWhite
+   border: none
+   border-bottom: 1px solid $mainWhite
+   background-color: transparent
+   outline: none !important
+  &::placeholder
+   // color: $mainWhite
+  &:hover
+   // opacity: 1
+   // color: $mainWhite
+ 
+.valid-feedback, .invalid-feedback
+ margin-left: 30px
+
+.country
+ select
+  // color: $mainWhite
+  &:focus
+   outline: none
+   color: $mainWhite
+  option
+   color: $mainBlack
+   &:hover
+    color: $mainYellow
+
+@media (max-width: 1200px)
+ .form
+  &:after
+   display: none
+  &__btn
+   margin: 1rem auto 0
+
+@media (max-width: 992px)
+ .form
+  &-row
+   display: flex
+   flex-direction: column
+  &-group
+   width: 70%
+   margin: 0 auto 1rem
+  &-control
+   margin-left: 0
+   width: 100%
+
+@media (max-width: 576px)
+ .form
+  &__btn
+   padding: 15px
+   border-radius: 10px
+   font-size: 14px

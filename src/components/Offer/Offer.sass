@@ -7,83 +7,14 @@
  height: 277px
  &-title
   color: $mainWhite
- &-form
-  position: relative
-  z-index: 1
-  &:after
-   content: ''
-   width: 1139px
-   height: 131px
-   background-color: #000
-   opacity: 0.6
-   position: absolute
-   bottom: -43px
-   left: 0
-   z-index: -1
-
-
-
-.form-control
- margin-left: 30px
- border: none
- border-bottom: 1px solid $mainWhite
- border-radius: 0
- opacity: 0.4
- background-color: transparent 
- width: 183px 
- &:focus
-  border: none
-  border-bottom: 1px solid $mainWhite
-  background-color: transparent
-  outline: none !important
- &::placeholder
-  color: $mainWhite
- &:hover
-  opacity: 1
  
 
-.country
- select
-  color: $mainWhite
-  &:focus
-   outline: none
-   color: $mainWhite
-  option
-   color: $mainBlack
-   &:hover
-    color: $mainYellow
 
-
-@media (max-width: 1200px)
- .offer
-  &-form
-   &:after
-    width: 950px
-    height: 131px
-    bottom: -20px
-    left: -18px
- 
- .btn-form
-  margin: auto
 
 @media (max-width: 992px)
  .offer
   height: auto
   background-size: cover
-  &-form
-   &:after
-    display: none
- .form-control
-  width: 100%
-  opacity: 1
-
- .form-row
-  display: flex
-  flex-direction: column
-
-@media (max-width: 665px)
- 
- .form-control
-  width: 80% 
+  
 
 
