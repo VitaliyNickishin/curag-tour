@@ -23,12 +23,16 @@ export default function FormValid() {
       <Form.Control
         required
         type="text"
+        // pattern="[A-Za-z]"
         placeholder="Имя"
         defaultValue=""
       />
       <Form.Control.Feedback>
        Looks good!
       </Form.Control.Feedback>
+      <Form.Control.Feedback type="invalid">
+      Please provide a name
+     </Form.Control.Feedback>
     </Form.Group>
 
     <Form.Group controlId="formGridPassword">
@@ -46,6 +50,7 @@ export default function FormValid() {
     <Form.Group controlId="validationCustomUsername">
      <Form.Control
        type="tel"
+       pattern="[0-9]{10}"
        placeholder="Телефон"
        required
      />
