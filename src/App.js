@@ -6,6 +6,7 @@ import SliderTour from './components/SliderTour/SliderTour';
 import Benefits from './components/Benefits/Benefits'
 import Offer from './components/Offer/Offer'
 import Footer from './components/Footer/Footer';
+import Modal from './components/Modal/Modal'
 import './index.sass'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/страны" component={Страны} />
         <Route component={Error} /> */}
       </Switch>
+      <Modal/>
     </div>
   );
 }

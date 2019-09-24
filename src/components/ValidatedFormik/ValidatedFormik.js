@@ -62,6 +62,7 @@ const ValidatedForm = () => (
 
   return (
   <form onSubmit = {handleSubmit}>
+    {/* {JSON.stringify(values)} */}
    <label htmlFor="email">Email</label>
    <input 
     name="email"
