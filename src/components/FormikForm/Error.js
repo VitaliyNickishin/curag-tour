@@ -2,8 +2,7 @@ import React from 'react'
 import './Error.sass'
 
 const Error = ({touched, message}) => {
- if (touched === false) {
- // if (!touched) {
+ if (!touched) {
   return <div className="form-message invalid">&nbsp;</div>;
  }
  if (message) {
