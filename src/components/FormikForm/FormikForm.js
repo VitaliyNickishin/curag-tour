@@ -2,20 +2,27 @@ import React from 'react'
 import {Formik} from 'formik'
 import * as Yup from 'yup'
 import Error from './Error'
+// import Button from '../Button/Button'
+import '../Button/Button.sass'
 import './FormikForm.sass'
 
 const validationSchema = Yup.object().shape({
  country: Yup.string()
  .max(255, "Must be shorter than 255")
  .required("Choose your country"),
+ people: Yup.number()
+ .required("Choose amount people"),
+ budget: Yup.string()
+ .max(255, "Must be shorter than 255")
+ .required("Choose your budget"),
  email: Yup.string()
  .email("Must be a valid email address")
  .max(255, "Must be shorter than 255")
  .required("Must enter an email"),
- password: Yup.string()
+ phone: Yup.number()
  .required("Required")
- .min(8, "Password is too short - should be 8 characters minimum")
- .matches(/(?=.*[0-9])/, "Password must contain a number"),
+ .min(12, "Phone is too short - should be 12 characters minimum"),
+ // .matches(/(?=.*[0-9])/, "Phone must contain a number"),
  name: Yup.string()
  .required("Must enter a name")
  .min(2, "Must have a character")
@@ -56,41 +63,44 @@ export default function FormikForm() {
    }) => (
     <form className="formik-form" onSubmit={handleSubmit}>
     {/* {JSON.stringify(values)} */}
-    <h2>Получить подборку туров</h2>
-
      <div className="input-row">
       <label htmlFor="country">Куда вы хотите поехать?</label>
-      <input 
-       name="country"
-       type="text"
-       id="country"
-       placeholder="Страна"
-       value={values.country}
-       onChange={handleChange}
-       onBlur={handleBlur}
-       className={touched.country && errors.country ? "has-error" : null}
-       />
-       <Error touched={touched.country} message={errors.country} />
+      <div className="input-wrap">
+       <input 
+        name="country"
+        type="text"
+        id="country"
+        placeholder="Страна"
+        value={values.country}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        className={touched.country && errors.country ? "has-error" : null}
+        />
+        <Error touched={touched.country} message={errors.country} />
+      </div>
      </div>
 
      <div className="input-row">
       <label htmlFor="people">Сколько людей едит</label>
-      <input 
-       name="people"
-       type="number"
-       id="people"
-       placeholder="Количество людей"
-       value={values.people}
-       onChange={handleChange}
-       onBlur={handleBlur}
-       className={touched.people && errors.people ? "has-error" : null}
-       />
-       <Error touched={touched.people} message={errors.people} />
+      <div className="input-wrap">
+       <input 
+        name="people"
+        type="number"
+        id="people"
+        placeholder="Количество людей"
+        value={values.people}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        className={touched.people && errors.people ? "has-error" : null}
+        />
+        <Error touched={touched.people} message={errors.people} />
+       </div>
      </div>
 
      <div className="input-row">
       <label htmlFor="budget">Ваш бюджет</label>
-      <input 
+      <div className="input-wrap">
+       <input 
        name="budget"
        type="text"
        id="budget"
@@ -101,11 +111,13 @@ export default function FormikForm() {
        className={touched.budget && errors.budget ? "has-error" : null}
        />
        <Error touched={touched.budget} message={errors.budget} />
+      </div>
      </div>
 
      <div className="input-row">
       <label htmlFor="email">Ваша почта</label>
-      <input 
+      <div className="input-wrap">
+       <input 
        name="email"
        type="text"
        id="email"
@@ -116,11 +128,13 @@ export default function FormikForm() {
        className={touched.email && errors.email ? "has-error" : null}
        />
        <Error touched={touched.email} message={errors.email} />
+      </div>
      </div>
 
      <div className="input-row">
       <label htmlFor="phone">Номер телефона</label>
-      <input 
+      <div className="input-wrap">
+       <input 
        name="phone"
        type="phone"
        placeholder="+380"
@@ -130,11 +144,13 @@ export default function FormikForm() {
        className={touched.phone && errors.phone ? "has-error" : null}
        />
        <Error touched={touched.phone} message={errors.phone} />
+      </div>
      </div>
 
      <div className="input-row">
       <label htmlFor="name">Ваше имя</label>
-      <input 
+      <div className="input-wrap">
+       <input 
        name="name"
        type="text"
        id="name"
@@ -145,10 +161,12 @@ export default function FormikForm() {
        className={touched.name && errors.name ? "has-error" : null}
        />
        <Error touched={touched.name} message={errors.name} />
+      </div>
      </div>
      
-     <div className="input-row">
-      <button type="submit" disabled={isSubmitting}>Login</button>
+     <div className="button-row">
+      <button type="submit" disabled={isSubmitting} className='btn-offer'>Получить предложение</button>
+     {/* <Button disabled={isSubmitting} /> */}
      </div>
       
     </form>
