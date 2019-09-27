@@ -5,10 +5,10 @@ import './Modal.sass'
 
 export default function Modal() {
  return (
-  <div className="modal-offer">
-   <div className="modal-contents">
+  <div className="modal-overlay">
+   <div className="modal-windows">
     <h2>Получить подборку туров</h2>
-    <div className="modal-main">
+    <div className="modal-body">
      <FormikForm/>
      <div className="img">
       <img src={palm} alt="palm"/>
