@@ -1,10 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './Title.sass'
 
-export default function Title({title}) {
- // const [color, setcolor] = useState(style="color:red")
+export default function Title({title, name}) {
  return (
-  <div className="section-title">
+  <div className={name}>
    <h4>{title}</h4>
   </div>
  )

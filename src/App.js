@@ -1,33 +1,19 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import Navbars from './components/Navbar/Navbars';
-import CarouselSider from './components/CarouselSider/CarouselSider';
-import SliderTour from './components/SliderTour/SliderTour';
-import Benefits from './components/Benefits/Benefits'
-import Offer from './components/Offer/Offer'
-import Footer from './components/Footer/Footer';
-import Modal from './components/Modal/Modal'
-import './index.sass'
+import Home from './pages/Home/Home'
+import Company from './pages/Company/Company'
+import Contacts from './pages/Contacts/Contacts'
+import Error from './pages/Error/Error'
 
-function App() {
+
+
+export default function App() {
   return (
-    <div className="section">
-      
-      <CarouselSider />
-      <Navbars />
-      <SliderTour/>
-      <Benefits/>
-      <Offer/>
-      <Footer/>
-      <Switch>
-        {/* <Route exact path="/" component={Главная} />
-        <Route exact path="/туры" component={Туры} />
-        <Route exact path="/страны" component={Страны} />
-        <Route component={Error} /> */}
-      </Switch>
-      <Modal/>
-    </div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/company" component={Company} />
+      <Route exact path="/contacts" component={Contacts} />
+      <Route component={Error} />
+    </Switch>
   );
 }
-
-export default App;

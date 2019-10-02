@@ -41,7 +41,7 @@ export default class Menu extends Component {
        <Link to="/ukraine">Услуги</Link>
       </li>
       <li>
-       <Link to="/ukraine">О компании</Link>
+       <Link to="/company">О компании</Link>
       </li>
       <li>
        <Link to="/ukraine">Контакты</Link>

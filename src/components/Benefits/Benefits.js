@@ -11,7 +11,7 @@ export default function Benefits() {
  return (
   <section className="benefits">
    <Container>
-    <Title title="Наши преимущества" />
+    <Title title="Наши преимущества" name="section-title"/>
     <Row noGutters>
      <Col lg={5} md={12}>
      <div className="benefits-img">

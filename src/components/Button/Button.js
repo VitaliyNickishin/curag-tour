@@ -1,9 +1,9 @@
 import React from 'react'
 import './Button.sass'
 
-export default function Button() {
+export default function Button({name}) {
  return (
-  <button type="submit" className='btn-offer'>
+  <button type="submit" className={name}>
    Получить предложение
   </button>
  )

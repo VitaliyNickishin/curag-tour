@@ -4,7 +4,7 @@ import Contacts from '../Contacts/Contacts';
 import Logo from '../Logo/Logo'
 import MenuBsp from '../MenuBsp/MenuBsp'
 import {TourConsumer} from '../../context'
-// import Menu from '../Menu/Menu'
+import Menu from '../Menu/Menu'
 import './Navbars.sass'
 
 
@@ -22,6 +22,7 @@ export default class Navbars extends Component {
         <Logo/>
         <Contacts/>
         <MenuBsp/>
+        {/* <Menu/> */}
        </Container>
       </div>
      )

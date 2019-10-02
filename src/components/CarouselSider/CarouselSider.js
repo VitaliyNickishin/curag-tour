@@ -25,7 +25,7 @@ export default class CarouselSider extends Component {
               />
               <Carousel.Caption onClick={() => openModal()}>
                 <h3>Лучшие предложения по солнечному Египту из Харькова</h3>
-                <Button/>
+                <Button name="btn-offer"/>
               </Carousel.Caption>
             </Carousel.Item>
 
@@ -37,7 +37,7 @@ export default class CarouselSider extends Component {
               />
               <Carousel.Caption onClick={() => openModal()}>
                 <h3>Second slide label</h3>
-                <Button />
+                <Button name="btn-offer" />
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -48,7 +48,7 @@ export default class CarouselSider extends Component {
               />
               <Carousel.Caption onClick={() => openModal()}>
                 <h3>Third slide label</h3>
-                <Button />
+                <Button name="btn-offer" />
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>

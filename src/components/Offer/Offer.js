@@ -10,7 +10,7 @@ export default function Offer() {
  return (
   <section className="offer">
    <Container>
-    <Title title="Хочу предложение по туру" className="offer-title"/>
+    <Title title="Хочу предложение по туру" name="section-title offer-title"/>
     <FormValid/>
     {/* <ValidatedFormik/> */}
    </Container>
