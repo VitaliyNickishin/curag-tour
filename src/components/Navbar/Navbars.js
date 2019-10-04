@@ -17,14 +17,14 @@ export default class Navbars extends Component {
      const {background} = value;
      
      return (
-      <div className="header" style={{background}}>
+      <header className="header" style={{background}}>
        <Container>
         <Logo/>
         <Contacts/>
         <MenuBsp/>
         {/* <Menu/> */}
        </Container>
-      </div>
+      </header>
      )
     }}
    </TourConsumer>
