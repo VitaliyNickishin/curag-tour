@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import viber from '../../img/icons/viber-icon.png'
+import telegram from '../../img/icons/telegram-icon.png'
 import './PersonCard.sass'
 
 export default class PersonCard extends Component {
@@ -9,13 +11,17 @@ export default class PersonCard extends Component {
     <div className="person-card-img">
      <img
       src={img} 
-      alt=""
+      alt="img"
      />
      </div>
      <div className="person-card-info">
       <div className="person-card-info__contacts">
-       <p>{name}</p>
-       <a href="tel:+380502872727">{phone}</a>
+       <strong>{name}</strong>
+       <div className="number">
+         <a href="tel:+380502872727">{phone}</a>
+         <img src={viber} alt="Viber"/>
+         <img src={telegram} alt="Telegram"/>
+       </div>
       </div>
       <div className="person-card-info__text">
        <p>{info}</p>
