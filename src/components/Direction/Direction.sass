@@ -1,0 +1,76 @@
+@import '../../fonts.scss' 
+@import '../../colors.sass'
+
+.direction
+ &-wrap
+  margin: 0 auto
+  max-width: 95%
+  background-color: $mainWhite
+  padding: 100px 0
+  box-shadow: 7px 4px 16px 2px rgba(14, 26, 38, 0.15)
+  transform: translateY(-210px)
+ &-main
+  display: flex
+  justify-content: space-between
+ &-img
+ &-content
+  padding: 30px 0 0 75px
+  // width: 600px
+ &-title
+  margin-bottom: 30px
+ &-description
+  margin-bottom: 40px
+  font-size: 16px
+  color: $thirddGrey
+  line-height: 24px
+
+.country
+ display: flex
+ flex-wrap: wrap
+ p
+  margin: 0 50px 35px 0  
+  font-size: 16px
+  line-height: 24px
+  span
+   color: $bgHeader
+   +bold
+
+@media (max-width: 1200px)
+ .direction
+  &-wrap
+   padding: 0
+  &-main
+   flex-direction: column-reverse
+  &-img
+   // order: 1
+   text-align: center
+  &-content
+   padding-left: 0
+   margin: 0 auto
+   width: 80%
+   text-align: center
+  &-title
+   text-align: center
+  &-description
+
+ .country
+  justify-content: center
+
+@media (max-width: 992px)
+ .direction
+  padding: 50px 0
+  &-wrap
+   transform: translateY(0)
+   
+@media (max-width: 768px)
+ .direction
+  &-img
+   img
+    width: 100%
+
+@media (max-width: 370px)
+ .country
+  flex-direction: column
+  p
+   margin-right: 0
+    

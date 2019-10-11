@@ -4,6 +4,8 @@ import Bunner from '../../components/Bunner/Bunner'
 import AroundWorld from '../../components/AroundWorld/AroundWorld'
 import Breadcrumbs from '../../components/Crumb/Breadcrumbs';
 import Team from '../../components/Team/Team';
+import Principles from '../../components/Principles/Principles';
+import Direction from '../../components/Direction/Direction';
 
 export default function Company() {
  return (
@@ -14,6 +16,8 @@ export default function Company() {
    </Hero>
    <AroundWorld/>
    <Team/>
+   <Principles/>
+   <Direction/>
   </>
  )
 }
