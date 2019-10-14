@@ -1,19 +1,19 @@
 @font-face {
  font-family: 'Arial Regular';
- src: url('./fonts/ArialMT.eot');
- src: url('./fonts/ArialMT.eot?#iefix') format('embedded-opentype'),
- url('./fonts/ArialMT.woff') format('woff'),
- url('./fonts/ArialMT.ttf') format('truetype');
+ src: url('./fonts/ArialMT/ArialMT.eot');
+ src: url('./fonts/ArialMT/ArialMT.eot?#iefix') format('embedded-opentype'),
+ url('./fonts/ArialMT/ArialMT.woff') format('woff'),
+ url('./fonts/ArialMT/ArialMT.ttf') format('truetype');
  font-weight: normal;
  font-style: normal;
  }
 
 @font-face {
  font-family: 'Arial Bold';
- src: url('./fonts/Arial-BoldMT.eot');
- src: url('./fonts/Arial-BoldMT.eot?#iefix') format('embedded-opentype'),
- url('./fonts/Arial-BoldMT.woff') format('woff'),
- url('./fonts/Arial-BoldMT.ttf') format('truetype');
+ src: url('./fonts/Arial-BoldMT/Arial-BoldMT.eot');
+ src: url('./fonts/Arial-BoldMT/Arial-BoldMT.eot?#iefix') format('embedded-opentype'),
+ url('./fonts/Arial-BoldMT/Arial-BoldMT.woff') format('woff'),
+ url('./fonts/Arial-BoldMT/Arial-BoldMT.ttf') format('truetype');
  font-weight: normal;
  font-style: normal;
  }

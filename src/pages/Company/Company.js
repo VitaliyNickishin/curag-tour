@@ -6,6 +6,7 @@ import Breadcrumbs from '../../components/Crumb/Breadcrumbs';
 import Team from '../../components/Team/Team';
 import Principles from '../../components/Principles/Principles';
 import Direction from '../../components/Direction/Direction';
+import SliderFeedback from '../../components/SliderFeedback/SliderFeedback';
 
 export default function Company() {
  return (
@@ -18,6 +19,7 @@ export default function Company() {
    <Team/>
    <Principles/>
    <Direction/>
+   <SliderFeedback/>
   </>
  )
 }
