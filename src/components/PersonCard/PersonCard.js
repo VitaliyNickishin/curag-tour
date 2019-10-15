@@ -5,12 +5,12 @@ import './PersonCard.sass'
 
 export default class PersonCard extends Component {
  render() {
-  const {img,name,phone,info} = this.props.card
+  const {url,name,phone,info} = this.props.card
   return (
    <article className="person-card">
     <div className="person-card-img">
      <img
-      src={img} 
+      src={url} 
       alt="img"
      />
      </div>

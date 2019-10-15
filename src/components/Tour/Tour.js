@@ -5,14 +5,14 @@ import './Tour.sass'
 export default class Tour extends Component {
  
  render() {
-  const {img,title,date,info,price,person} = this.props.item
+  const {url,title,date,info,price,person} = this.props.item
   
   
   return (
    <article className="tour">
     <div className="tour-img">
      <img
-      src={img} 
+      src={url} 
       alt=""
      />
      </div>
