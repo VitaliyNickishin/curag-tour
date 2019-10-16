@@ -1,3 +1,7 @@
+@import '../../fonts.scss' 
+@import '../../colors.sass' 
+
+
 .feedback-card
  margin: 10px 15px
  padding: 55px 25px
@@ -7,31 +11,66 @@
  align-items: center
  transition: all 0.3s
  box-shadow: 1px 1px 12px 1px rgba(14, 26, 38, 0.15)
- cursor: pointer
+ &:hover
+  box-shadow: 1px 2px 19px 2px rgba(14, 26, 38, 0.22)
 
-.card-img
- width: 114px
- height: 114px
+.img-wrap
  position: relative
- margin-bottom: 35px
+ //рамка с сердечком 
  &:after
   content: ""
   display: block
   position: absolute
-  top: -10px
-  left: -12px
+  top: -9px
+  left: -14px
   width: 140px
   height: 140px
   background: url(../../img/feedback/feedback-shape.png) no-repeat center center
   background-size: contain
- img
-  width: 114px
-  // width: 100%
-  border-radius: 50%
-  
 
-.shape
- position: absolute
- top: 0
- left: 0
+.face
+ width: 113px
+ height: 114px
+ margin-bottom: 35px
+ overflow: hidden
+ border-radius: 50%
+ img
+  height: 100%
+
+ //рамка с сердечком 
+// .shape
+//  position: absolute
+//  top: 0
+//  left: 0
+//  width: 140px
+
+.stars
+ margin-bottom: 20px
  width: 140px
+ display: flex
+ justify-content: space-around
+ &-icon
+  color: $mainYellow
+  font-size: 20px
+
+.info
+ text-align: center
+ h3
+  margin-bottom: 20px
+  font-size: 18px
+  +bold
+ p
+  height: 95px
+  line-height: 30px
+  overflow: hidden
+
+.read-more
+ background-color: transparent
+ border: 0
+ color: $bgHeader
+ +bold
+ cursor: pointer
+ &:hover
+  color: $mainYellow
+ &:focus
+  outline: none
