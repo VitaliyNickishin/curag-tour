@@ -6,7 +6,20 @@ import Title from '../Title/Title'
 import {Container} from 'react-bootstrap'
 import FeedbackCard from '../FeedbackCard/FeedbackCard'
 import {feedbackData} from '../tourData'
+import {FaChevronRight} from 'react-icons/fa'
+import {FaChevronLeft} from 'react-icons/fa'
 import './SliderFeedback.sass'
+
+function NextArrow(props) {
+ const {className, style, onClick} = props;
+ return (
+  <button
+   className={className}
+   style={{...style, display: "block", background: "red"}}
+   onClick={onClick}
+  />
+ )
+}
 
 export default class SliderFeedback extends Component {
  state = {
@@ -20,21 +33,26 @@ export default class SliderFeedback extends Component {
    infinite: true,
    speed: 500,
    slidesToShow: 3,
-			slidesToScroll: 1,
+   slidesToScroll: 1,
+   // nextArrow: <button className="next arrow"><FaChevronRight/></button>,
+   nextArrow: <NextArrow className="next arrow"/>,
+   prevArrow: <button className="prev arrow"><FaChevronLeft/></button>,
    responsive: [
     {
       breakpoint: 1700,
       settings: {
-      slidesToShow: 2,
+      slidesToShow: 3,
       slidesToScroll: 1,
       // dotsClass: 'slick-dots slick-slider__dots',
-      arrows: true
+      arrows: true,
+      // nextArrow: <button className="next arrow"><FaChevronRight/></button>,
+      // prevArrow: <button className="prev arrow"><FaChevronLeft/></button>
       }
     },
     {
       breakpoint: 1200,
       settings: {
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
       arrows: true
 						}
