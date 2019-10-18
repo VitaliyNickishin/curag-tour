@@ -8,24 +8,29 @@ import FeedbackCard from '../FeedbackCard/FeedbackCard'
 import {feedbackData} from '../tourData'
 import {FaChevronRight} from 'react-icons/fa'
 import {FaChevronLeft} from 'react-icons/fa'
+import SliderArrow from '../SliderArrow/SliderArrow';
 import './SliderFeedback.sass'
 
-function NextArrow(props) {
- const {className, style, onClick} = props;
- return (
-  <button
-   className={className}
-   style={{...style, display: "block", background: "red"}}
-   onClick={onClick}
-  />
- )
-}
+
+// function NextArrow(props) {
+//  const {className, style, onClick} = props;
+//  return (
+//   <button
+//    className={`arrow next`}
+//    style={{...style, display: "block"}}
+//    onClick={onClick}
+//   >
+//    <FaChevronRight/>
+//   </button>
+//  )
+// }
 
 export default class SliderFeedback extends Component {
  state = {
   feedback: feedbackData
  }
  render() {
+  
   const {feedback} = this.state;
   let settings = {
 			arrows: true,
@@ -34,9 +39,12 @@ export default class SliderFeedback extends Component {
    speed: 500,
    slidesToShow: 3,
    slidesToScroll: 1,
-   // nextArrow: <button className="next arrow"><FaChevronRight/></button>,
-   nextArrow: <NextArrow className="next arrow"/>,
-   prevArrow: <button className="prev arrow"><FaChevronLeft/></button>,
+   prevArrow: <SliderArrow name="arrow feedback-prev">
+              <FaChevronLeft/>
+              </SliderArrow>,
+   nextArrow: <SliderArrow name="arrow feedback-next">
+               <FaChevronRight/>
+              </SliderArrow>,
    responsive: [
     {
       breakpoint: 1700,
