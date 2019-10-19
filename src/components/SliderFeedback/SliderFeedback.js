@@ -12,66 +12,41 @@ import SliderArrow from '../SliderArrow/SliderArrow';
 import './SliderFeedback.sass'
 
 
-// function NextArrow(props) {
-//  const {className, style, onClick} = props;
-//  return (
-//   <button
-//    className={`arrow next`}
-//    style={{...style, display: "block"}}
-//    onClick={onClick}
-//   >
-//    <FaChevronRight/>
-//   </button>
-//  )
-// }
-
 export default class SliderFeedback extends Component {
  state = {
   feedback: feedbackData
  }
  render() {
-  
   const {feedback} = this.state;
+
   let settings = {
 			arrows: true,
-   dots: false,
+   dots: true,
    infinite: true,
-   speed: 500,
+   speed: 1500,
    slidesToShow: 3,
-   slidesToScroll: 1,
-   prevArrow: <SliderArrow name="arrow feedback-prev">
-              <FaChevronLeft/>
+   slidesToScroll: 3,
+   prevArrow: <SliderArrow name="arrow feedback-prev" to="prew">
+               <FaChevronLeft/>
               </SliderArrow>,
-   nextArrow: <SliderArrow name="arrow feedback-next">
+   nextArrow: <SliderArrow name="arrow feedback-next" to="next">
                <FaChevronRight/>
               </SliderArrow>,
+   dotsClass: "feedback-dots",
    responsive: [
+    
     {
-      breakpoint: 1700,
-      settings: {
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      // dotsClass: 'slick-dots slick-slider__dots',
-      arrows: true,
-      // nextArrow: <button className="next arrow"><FaChevronRight/></button>,
-      // prevArrow: <button className="prev arrow"><FaChevronLeft/></button>
-      }
-    },
-    {
-      breakpoint: 1200,
+      breakpoint: 992,
       settings: {
       slidesToShow: 2,
-      slidesToScroll: 1,
-      arrows: true
+      slidesToScroll: 1
 						}
 					},
     	{
       breakpoint: 590,
       settings: {
       slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      dots: true
+      slidesToScroll: 1
       }
     }
   ]
