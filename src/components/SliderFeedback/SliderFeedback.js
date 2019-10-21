@@ -20,6 +20,7 @@ export default class SliderFeedback extends Component {
   const {feedback} = this.state;
 
   let settings = {
+   className: 'feedback-slider',
 			arrows: true,
    dots: true,
    infinite: true,
@@ -39,12 +40,13 @@ export default class SliderFeedback extends Component {
       breakpoint: 992,
       settings: {
       slidesToShow: 2,
-      slidesToScroll: 1
+      slidesToScroll: 2
 						}
 					},
     	{
-      breakpoint: 590,
+      breakpoint: 670,
       settings: {
+      speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1
       }

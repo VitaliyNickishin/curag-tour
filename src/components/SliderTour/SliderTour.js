@@ -16,12 +16,13 @@ export default class SliderTour extends Component {
   const {tours} = this.state;
 
   let settings = {
-			arrows: true,
+   className: 'tour-slider',
+	 arrows: true,
    dots: false,
    infinite: true,
    speed: 500,
    slidesToShow: 3,
-			slidesToScroll: 1,
+	 slidesToScroll: 1,
    responsive: [
     {
       breakpoint: 1700,
