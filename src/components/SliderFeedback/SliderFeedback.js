@@ -10,6 +10,7 @@ import {FaChevronRight} from 'react-icons/fa'
 import {FaChevronLeft} from 'react-icons/fa'
 import SliderArrow from '../SliderArrow/SliderArrow';
 import './SliderFeedback.sass'
+// import { TourConsumer } from '../../context';
 
 
 export default class SliderFeedback extends Component {
@@ -35,7 +36,6 @@ export default class SliderFeedback extends Component {
               </SliderArrow>,
    dotsClass: "feedback-dots",
    responsive: [
-    
     {
       breakpoint: 992,
       settings: {
@@ -54,6 +54,11 @@ export default class SliderFeedback extends Component {
   ]
  };
   return (
+    // <TourConsumer>
+    //   {value => {
+
+    //   }}
+    // </TourConsumer>
    <section className="feedback">
     <Container>
      <Title 
