@@ -38,7 +38,9 @@ export default class FeedbackCard extends Component {
         <button 
          type="button" 
          className="read-more"
-         onClick = {() => openModal()}
+         onClick = {() =>
+          openModal()
+         }
         >
           читать больше
         </button>

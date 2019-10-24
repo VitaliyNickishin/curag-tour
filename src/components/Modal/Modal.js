@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import FormikForm from '../FormikForm/FormikForm'
 import palm from '../../img/modal/palm.png'
 import {TourConsumer} from '../../context'
-import { MdClear } from "react-icons/md"
+import ButtonClose from '../ButtonClose/ButtonClose'
 import './Modal.sass'
 
 export default class Modal extends Component {
@@ -21,12 +21,10 @@ export default class Modal extends Component {
         <div className="modals-windows">
          <div className="modals-header">
          <h2>Получить подборку туров</h2>
-         <button
-          className="modals-header__close" 
+         <ButtonClose
+          name="modals-header__btn" 
           onClick={() => closeModal()}
-         >
-          <MdClear/>
-         </button>
+         />
          </div>
          <div className="modals-body">
           <FormikForm/>

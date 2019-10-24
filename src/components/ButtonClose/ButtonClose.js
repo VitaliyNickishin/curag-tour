@@ -7,7 +7,7 @@ export default function ButtonClose(props) {
  return (
   <button
    type="button"
-   className={name}
+   className={`btn-close ${name}`}
    onClick={onClick}
   >
    <MdClear/>

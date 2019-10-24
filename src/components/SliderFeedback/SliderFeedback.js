@@ -5,21 +5,16 @@ import "slick-carousel/slick/slick-theme.css";
 import Title from '../Title/Title'
 import {Container} from 'react-bootstrap'
 import FeedbackCard from '../FeedbackCard/FeedbackCard'
-import {feedbackData} from '../tourData'
+import { TourConsumer } from '../../context';
 import {FaChevronRight} from 'react-icons/fa'
 import {FaChevronLeft} from 'react-icons/fa'
 import SliderArrow from '../SliderArrow/SliderArrow';
 import './SliderFeedback.sass'
-// import { TourConsumer } from '../../context';
+
 
 
 export default class SliderFeedback extends Component {
- state = {
-  feedback: feedbackData
- }
  render() {
-  const {feedback} = this.state;
-
   let settings = {
    className: 'feedback-slider',
 			arrows: true,
@@ -54,32 +49,33 @@ export default class SliderFeedback extends Component {
   ]
  };
   return (
-    // <TourConsumer>
-    //   {value => {
-
-    //   }}
-    // </TourConsumer>
-   <section className="feedback">
-    <Container>
-     <Title 
-      name="section-title feedback-title" 
-      title="Отзывы довольных клиентов" 
-     />
-     <div className="feedback-list">
-      <Slider {...settings}>
-       {feedback.map(rewiew => {
-        return (
-         <FeedbackCard
-          key={rewiew.id}
-          item={rewiew}
+   <TourConsumer>
+    {value => {
+     const {feedback} = value;
+      return (
+       <section className="feedback">
+        <Container>
+         <Title 
+          name="section-title feedback-title" 
+          title="Отзывы довольных клиентов" 
          />
-        )
-       })}
-      </Slider>
-     </div>
-     
-    </Container>
-   </section>
+         <div className="feedback-list">
+          <Slider {...settings}>
+          {feedback.map(rewiew => {
+            return (
+            <FeedbackCard
+              key={rewiew.id}
+              item={rewiew}
+            />
+            )
+           })}
+          </Slider>
+         </div>
+        </Container>
+       </section>
+       )
+      }}
+   </TourConsumer>
   )
  }
 }

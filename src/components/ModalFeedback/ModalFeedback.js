@@ -11,24 +11,24 @@ export default class ModalFeedback extends Component {
    <TourConsumer>
     {value => {
      const {modalOpen, closeModal} = value;
-     // const {url,name,alt,description} = this.props.item;
+     const {url,name,alt,description} = value.modalFeedback;
      if (!modalOpen) {
       return null;
      }
      else {
       return (
        <div className="modal-overlay">
-        <article className="feedback-card modal-feedback">
+        <div className="modal-wrap">
         <ButtonClose
-         name="modal-feedback__close" 
+         name="modal-wrap__btn" 
          onClick={() => closeModal()}
         />
         <div className="img-wrap">
          <div className="face">
-          {/* <img
+          <img
            src={url} 
            alt={alt}
-          /> */}
+          />
           {/* <img src={shape} alt="" className="shape"/> */}
          </div>
         </div>
@@ -41,10 +41,10 @@ export default class ModalFeedback extends Component {
           {/* <i className="icon-star-empty-1 stars-icon"></i> */}
          </div>
          <div className="info">
-          {/* <h3>{name}</h3>
-          <p>{description}</p> */}
+          <h3>{name}</h3>
+          <p>{description}</p>
          </div>
-       </article>
+       </div>
        </div>
        
       )

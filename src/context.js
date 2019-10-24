@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
+import {feedbackData, detailFeedback} from './components/tourData'
 
 const TourContext = React.createContext();
 
 class TourProvider extends Component {
  state = {
+  rewiew: [],
   modalOpen: false,
-  background: 'transparent'
-
+  background: 'transparent',
+  feedback: feedbackData,
+  modalFeedback: detailFeedback
  }
 
 // изменение фона шапки при прокрутке
@@ -22,9 +25,11 @@ componentDidMount() {
 }
 
 // открытие модального окна 
-openModal = () => {
+openModal = (id) => {
+ const openRewiew = this.getItem(id);
  this.setState(() => {
   return {
+   modalFeedback: openRewiew,
    modalOpen: true
   }
  })
@@ -37,6 +42,19 @@ closeModal = () => {
   }
  })
 }
+
+getItem = id => {
+ const cardRewiew = this.state.rewiew.find(cr => cr.id === id);
+ return cardRewiew;
+}
+handleDetail = id => {
+ //console.log('hello from details');
+ const mainRewiew = this.getItem(id);
+ 
+ this.setState(()=>{
+  return {detailProduct: mainRewiew};
+ });
+};
  render() {
   return (
    <TourContext.Provider
@@ -44,7 +62,8 @@ closeModal = () => {
      ...this.state,
      openModal: this.openModal,
      closeModal: this.closeModal,
-     listenScrollEvent: this.listenScrollEvent
+     listenScrollEvent: this.listenScrollEvent,
+     handleDetail: this.handleDetail
     }}
    >
     {this.props.children}
