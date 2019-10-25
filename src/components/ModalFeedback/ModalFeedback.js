@@ -3,7 +3,6 @@ import {TourConsumer} from '../../context'
 import ButtonClose from '../ButtonClose/ButtonClose'
 import {FaStar} from 'react-icons/fa'
 import './ModalFeedback.sass'
-// import '../FeedbackCard/FeedbackCard.sass'
 
 export default class ModalFeedback extends Component {
  render() {
@@ -44,7 +43,6 @@ export default class ModalFeedback extends Component {
          </div>
        </div>
        </div>
-       
       )
      }
     }}
