@@ -23,24 +23,22 @@ export default class ModalFeedback extends Component {
          name="modal-wrap__btn" 
          onClick={() => closeModal()}
         />
-        <div className="img-wrap">
-         <div className="face">
+        <div className="img-wrap modal-img-wrap">
+         <div className="face modal-face">
           <img
            src={url} 
            alt={alt}
           />
-          {/* <img src={shape} alt="" className="shape"/> */}
          </div>
         </div>
-         <div className="stars">
+         <div className="stars modal-stars">
           <FaStar className="stars-icon"/>
           <FaStar className="stars-icon"/>
           <FaStar className="stars-icon"/>
           <FaStar className="stars-icon"/>
           <FaStar className="stars-icon"/>
-          {/* <i className="icon-star-empty-1 stars-icon"></i> */}
          </div>
-         <div className="info">
+         <div className="info modal-info">
           <h3>{name}</h3>
           <p>{description}</p>
          </div>

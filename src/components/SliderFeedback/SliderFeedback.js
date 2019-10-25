@@ -51,7 +51,7 @@ export default class SliderFeedback extends Component {
   return (
    <TourConsumer>
     {value => {
-     const {feedback} = value;
+     // const {feedback} = value;
       return (
        <section className="feedback">
         <Container>
@@ -61,11 +61,11 @@ export default class SliderFeedback extends Component {
          />
          <div className="feedback-list">
           <Slider {...settings}>
-          {feedback.map(rewiew => {
+          {value.rewiew.map(rew => {
             return (
             <FeedbackCard
-              key={rewiew.id}
-              item={rewiew}
+              key={rew.id}
+              item={rew}
             />
             )
            })}

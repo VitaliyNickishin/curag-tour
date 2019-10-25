@@ -6,11 +6,17 @@ const TourContext = React.createContext();
 class TourProvider extends Component {
  state = {
   rewiew: [],
+  // detailFeedback: detailFeedback,
   modalOpen: false,
   background: 'transparent',
-  feedback: feedbackData,
+  //feedback: feedbackData,
   modalFeedback: detailFeedback
  }
+
+componentDidMount() {
+ window.addEventListener('scroll', this.listenScrollEvent);
+ this.setRewiew();
+}
 
 // изменение фона шапки при прокрутке
 listenScrollEvent = e => {
@@ -20,9 +26,7 @@ listenScrollEvent = e => {
   this.setState({background: 'transparent'})
  }
 }
-componentDidMount() {
- window.addEventListener('scroll', this.listenScrollEvent)
-}
+
 
 // открытие модального окна 
 openModal = (id) => {
@@ -42,19 +46,34 @@ closeModal = () => {
   }
  })
 }
+//cоздаем в пустом массиве клонированные данные 
+setRewiew = () => {
+ let tempRewiew = [];
+ feedbackData.forEach(item => {
+  // console.log(item);
+  const singleItem = {...item};
+  tempRewiew = [...tempRewiew, singleItem];
+  // console.log(tempRewiew);
 
+ });
+ this.setState(() => {
+  return {rewiew: tempRewiew}
+ })
+}
+// находим нужный id из клонированного массива данных
+// при клике на карточку отобажается соотв. карточка с id 
 getItem = id => {
  const cardRewiew = this.state.rewiew.find(cr => cr.id === id);
+ // console.log(cardRewiew);
  return cardRewiew;
 }
-handleDetail = id => {
- //console.log('hello from details');
- const mainRewiew = this.getItem(id);
+// handleDetail = id => {
+//  const mainRewiew = this.getItem(id);
  
- this.setState(()=>{
-  return {detailProduct: mainRewiew};
- });
-};
+//  this.setState(()=>{
+//   return {detailFeedback: mainRewiew};
+//  });
+// };
  render() {
   return (
    <TourContext.Provider
@@ -63,7 +82,7 @@ handleDetail = id => {
      openModal: this.openModal,
      closeModal: this.closeModal,
      listenScrollEvent: this.listenScrollEvent,
-     handleDetail: this.handleDetail
+     // handleDetail: this.handleDetail
     }}
    >
     {this.props.children}

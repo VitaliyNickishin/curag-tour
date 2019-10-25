@@ -7,7 +7,7 @@ import './FeedbackCard.sass'
 
 export default class FeedbackCard extends Component {
  render() {
-  const {url,name,alt,description} = this.props.item
+  const {id,url,name,alt,description} = this.props.item
   return (
    <TourConsumer>
     {value => {
@@ -38,9 +38,7 @@ export default class FeedbackCard extends Component {
         <button 
          type="button" 
          className="read-more"
-         onClick = {() =>
-          openModal()
-         }
+         onClick = {() => openModal(id)}
         >
           читать больше
         </button>
