@@ -16,7 +16,12 @@ export default class CarouselSider extends Component {
         const {openModal} = value;
         
         return (
-          <Carousel>
+          <Carousel 
+          // style={{
+          //   height: `${window.innerHeight}px`,
+          //   overflow: "hidden"
+          //  }}
+           >
             <Carousel.Item>
               <img
                 className="d-block w-100"

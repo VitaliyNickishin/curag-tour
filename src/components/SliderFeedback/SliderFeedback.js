@@ -15,7 +15,7 @@ import './SliderFeedback.sass'
 
 export default class SliderFeedback extends Component {
  render() {
-  let settings = {
+  const settings = {
    className: 'feedback-slider',
 			arrows: true,
    dots: true,

@@ -7,6 +7,7 @@ import Team from '../../components/Team/Team';
 import Principles from '../../components/Principles/Principles';
 import Direction from '../../components/Direction/Direction';
 import SliderFeedback from '../../components/SliderFeedback/SliderFeedback';
+import Offer from '../../components/Offer/Offer'
 import ModalFeedback from '../../components/ModalFeedback/ModalFeedback';
 
 export default function Company() {
@@ -21,6 +22,7 @@ export default function Company() {
    <Principles/>
    <Direction/>
    <SliderFeedback/>
+   <Offer/>
    <ModalFeedback/>
   </>
  )

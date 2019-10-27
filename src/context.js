@@ -5,11 +5,10 @@ const TourContext = React.createContext();
 
 class TourProvider extends Component {
  state = {
+  //feedback: feedbackData,
   rewiew: [],
-  // detailFeedback: detailFeedback,
   modalOpen: false,
   background: 'transparent',
-  //feedback: feedbackData,
   modalFeedback: detailFeedback
  }
 
@@ -19,13 +18,15 @@ componentDidMount() {
 }
 
 // изменение фона шапки при прокрутке
-listenScrollEvent = e => {
+listenScrollEvent = () => {
  if (window.scrollY > 400) {
   this.setState({background: '#0f3862'})
  } else {
   this.setState({background: 'transparent'})
  }
 }
+
+
 
 
 // открытие модального окна 
@@ -38,6 +39,7 @@ openModal = (id) => {
   }
  })
 }
+
  // закрытие модального окна
 closeModal = () => {
  this.setState(()=>{
@@ -46,6 +48,7 @@ closeModal = () => {
   }
  })
 }
+
 //cоздаем в пустом массиве клонированные данные 
 setRewiew = () => {
  let tempRewiew = [];
@@ -54,12 +57,12 @@ setRewiew = () => {
   const singleItem = {...item};
   tempRewiew = [...tempRewiew, singleItem];
   // console.log(tempRewiew);
-
  });
  this.setState(() => {
   return {rewiew: tempRewiew}
  })
 }
+
 // находим нужный id из клонированного массива данных
 // при клике на карточку отобажается соотв. карточка с id 
 getItem = id => {
