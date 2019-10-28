@@ -5,6 +5,7 @@ import ImgSecond from '../../img/header/2.png'
 import ImgThird from '../../img/header/3.png'
 import Button from '../Button/Button'
 import { TourConsumer } from '../../context'
+import Timer from '../../components/Timer/Timer'
 import './CarouselSider.sass'
 
 
@@ -16,6 +17,7 @@ export default class CarouselSider extends Component {
         const {openModal} = value;
         
         return (
+          <section className="slider">
           <Carousel 
           // style={{
           //   height: `${window.innerHeight}px`,
@@ -27,10 +29,11 @@ export default class CarouselSider extends Component {
                 className="d-block w-100"
                 src={ImgFirst}
                 alt="First slide"
-              />
+                />
               <Carousel.Caption>
                 <h3>Лучшие предложения по солнечному Египту из Харькова</h3>
                 <Button name="btn-offer" onClick={() => openModal()}/>
+              
               </Carousel.Caption>
             </Carousel.Item>
 
@@ -57,6 +60,8 @@ export default class CarouselSider extends Component {
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
+          <Timer/>
+          </section>
         )
       }}
     </TourConsumer>
