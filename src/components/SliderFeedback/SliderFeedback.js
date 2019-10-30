@@ -9,6 +9,7 @@ import { TourConsumer } from '../../context';
 import {FaChevronRight} from 'react-icons/fa'
 import {FaChevronLeft} from 'react-icons/fa'
 import SliderArrow from '../SliderArrow/SliderArrow';
+import Fade from 'react-reveal/Fade'
 import './SliderFeedback.sass'
 
 
@@ -20,6 +21,7 @@ export default class SliderFeedback extends Component {
 			arrows: true,
    dots: true,
    infinite: true,
+   autoplay: true,
    speed: 1500,
    slidesToShow: 3,
    slidesToScroll: 3,
@@ -55,10 +57,12 @@ export default class SliderFeedback extends Component {
       return (
        <section className="feedback">
         <Container>
-         <Title 
-          name="section-title feedback-title" 
-          title="Отзывы довольных клиентов" 
-         />
+          <Fade left delay={2000}>
+           <Title 
+            name="section-title feedback-title" 
+            title="Отзывы довольных клиентов" 
+           />
+          </Fade>
          <div className="feedback-list">
           <Slider {...settings}>
           {value.rewiew.map(rew => {

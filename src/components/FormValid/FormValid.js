@@ -19,14 +19,15 @@ export default function FormValid() {
  return (
   <Form noValidate validated={validated} onSubmit={handleSubmit} className="form">
    <Form.Row>
+
     <Form.Group controlId="validationCustom01">
-      <Form.Control
+        <Form.Control
         required
         type="text"
         // pattern="[A-Za-z]"
         placeholder="Имя"
         defaultValue=""
-      />
+        />
       <Form.Control.Feedback>
        Looks good!
       </Form.Control.Feedback>

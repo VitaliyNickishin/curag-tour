@@ -9,13 +9,16 @@ import Direction from '../../components/Direction/Direction';
 import SliderFeedback from '../../components/SliderFeedback/SliderFeedback';
 import Offer from '../../components/Offer/Offer'
 import ModalFeedback from '../../components/ModalFeedback/ModalFeedback';
+import {Zoom} from 'react-reveal'
 
 export default function Company() {
  return (
   <>
   <Breadcrumbs/>
    <Hero name="about" title="О нашей компании">
-    <Bunner/>
+    <Zoom>
+     <Bunner/>
+    </Zoom>
    </Hero>
    <AroundWorld/>
    <Team/>
