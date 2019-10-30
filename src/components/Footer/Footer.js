@@ -6,8 +6,8 @@ import {Link} from 'react-router-dom'
 import {Nav} from 'react-bootstrap'
 import logo from '../../img/footer/logo-footer.png'
 import logoWa from '../../img/footer/logo-wa.png'
-import location from '../../img/icons/location.png'
-import phone from '../../img/icons/phone.png'
+import Point from '../Point/Point'
+import Phone from '../Phone/Phone'
 import fb from '../../img/icons/facebook.png'
 import inst from '../../img/icons/instagram.png'
 import './Footer.sass'
@@ -55,14 +55,8 @@ export default function Footer() {
     <Col lg={4} md={4} sm={12}>
     <Nav className="flex-column footer-nav">
       <h3>Контакты</h3>
-      <div className="footer-location">
-       <img src={location} alt="location"/>
-       <span>г. Харьков, ул. Лермонтовская 10а</span>
-      </div>
-      <div className="footer-phone">
-       <img src={phone} alt="phone"/>
-       <a href="tel:+380999908100">+38 (099) 990-81-00</a>
-      </div>
+      <Point name="footer-location"/>
+      <Phone name="footer-phone"/>
       <div className="line"></div>
       <div className="footer-social">
        <img src={fb} alt="fb"/>

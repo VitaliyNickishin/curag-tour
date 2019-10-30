@@ -32,9 +32,8 @@ export default class Team extends Component {
       <img className="shell" src={shell} alt="shell"/>
       {person.map(item => {
       return (
-       <Roll>
+       <Roll key={item.id}>
         <PersonCard 
-          key={item.id}
           card={item}
         />
        </Roll>

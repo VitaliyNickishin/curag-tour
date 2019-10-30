@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route, Switch, Link} from 'react-router-dom';
-import { MdHome, MdEmail, MdInfo } from 'react-icons/md'
+// import { MdHome, MdEmail, MdInfo } from 'react-icons/md'
 import Home from './pages/Home/Home'
 import Company from './pages/Company/Company'
-import Contacts from './pages/Contacts/Contacts'
+import OurContacts from './pages/OurContacts/OurContacts'
 import Error from './pages/Error/Error'
 import Navbars from './components/Navbar/Navbars';
 import Footer from './components/Footer/Footer';
@@ -34,7 +34,7 @@ import Footer from './components/Footer/Footer';
 
 export default function App() {
   return (
-    <div className="section">
+    <div className="main">
       {/* <Crumb separator='/'> */}
       {/* <Crumb separator={<Separator>/</Separator>}>
         {options.items.map(({to, label}) => {
@@ -58,7 +58,7 @@ export default function App() {
       <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/company" component={Company} />
-      <Route exact path="/contacts" component={Contacts} />
+      <Route exact path="/contacts" component={OurContacts} />
       <Route component={Error} />
     </Switch>
     <Footer/>
