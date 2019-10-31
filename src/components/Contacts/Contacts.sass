@@ -2,13 +2,13 @@
 @import '../../colors.sass' 
 
 .contacts
- // position: absolute
+ padding-top: 23px
  position: fixed
  top: 0
  right: 14%
- padding: 23px 0 17px
  display: flex
  justify-content: flex-end
+ align-items: center
  background-color: transparent
  +bold
  color: $secondGrey
@@ -16,24 +16,28 @@
  opacity: 0.8
  &-location
  &-phone
-  margin-left: 41px
+  margin-left: 30px
   position: relative
   &:after
    content: '(viber, telegram)'
    position: absolute
    top: 0
    right: -112px
-   // width: 50px
   a
    margin-left: 3px
    color: $secondGrey
    &:hover
     text-decoration: none
  &-social
-  margin-left: 120px
-  img
-   &:last-child
-    margin-left: 15px
+  margin-left: 135px
+  width: 70px
+  a
+   width: 28px
+   height: 28px
+   background-color: $secondGrey
+   svg
+    color: $bgHeader
+    font-size: 16px
 
 @media screen and (max-width: 992px) 
  .contacts

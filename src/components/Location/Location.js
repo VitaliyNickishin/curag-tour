@@ -6,6 +6,7 @@ import Point from '../Point/Point'
 import Phone from '../Phone/Phone'
 import {Row} from 'react-bootstrap'
 import {Col} from 'react-bootstrap'
+import SocialIcons from '../SocialIcons/SocialIcons'
 import './Location.sass'
 
 export default function Location() {
@@ -13,22 +14,28 @@ export default function Location() {
   <Section name="location">
    <Row>
     <Col lg={6}>
-     <div className="location__content">
+     <div className="location-content">
       <Title 
-       name="section-title location__title" 
+       name="section-title location-title" 
        title="Наши контакты" 
       />
-      <div className="location__description">
+      <div className="location-description">
        Мы с удовольствем ответим на все интересующие вас вопросы. 
        Проконсультируем и поможем с выбором, а так же ждём просто 
        ваших отзывов. Мы стараемся для Вас!
       </div>
-      <Point name="location__point"/>
-      <Phone name="location__phone"/>
+      <div className="location-info">
+       <Point name="location-point"/>
+       <Phone name="location-phone"/>
+      </div>
+      <div className="location-join">
+       <p>Присоединяйся к нам: </p>
+       <SocialIcons/>
+      </div>
      </div>
     </Col>
     <Col lg={6}>
-     <div className="location__img">
+     <div className="location-img">
     <img src={map} alt="map"/>
    </div>
     </Col>

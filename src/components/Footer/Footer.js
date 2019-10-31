@@ -8,8 +8,7 @@ import logo from '../../img/footer/logo-footer.png'
 import logoWa from '../../img/footer/logo-wa.png'
 import Point from '../Point/Point'
 import Phone from '../Phone/Phone'
-import fb from '../../img/icons/facebook.png'
-import inst from '../../img/icons/instagram.png'
+import SocialIcons from '../SocialIcons/SocialIcons'
 import './Footer.sass'
 
 export default function Footer() {
@@ -58,10 +57,7 @@ export default function Footer() {
       <Point name="footer-location"/>
       <Phone name="footer-phone"/>
       <div className="line"></div>
-      <div className="footer-social">
-       <img src={fb} alt="fb"/>
-       <img src={inst} alt="inst"/>
-      </div>
+      <SocialIcons name="footer-social"/>
      </Nav>
     </Col>
     </Row>
