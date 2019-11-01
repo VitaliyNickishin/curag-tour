@@ -1,12 +1,13 @@
 import React from 'react'
 import Title from '../Title/Title'
 import Section from '../Section/Section'
-import map from '../../img/benefits/1.png'
+// import map from '../../img/benefits/1.png'
 import Point from '../Point/Point'
 import Phone from '../Phone/Phone'
 import {Row} from 'react-bootstrap'
 import {Col} from 'react-bootstrap'
 import SocialIcons from '../SocialIcons/SocialIcons'
+import Map from '../Map/Map'
 import './Location.sass'
 
 export default function Location() {
@@ -35,9 +36,10 @@ export default function Location() {
      </div>
     </Col>
     <Col lg={6}>
-     <div className="location-img">
+     <Map/>
+     {/* <div className="location-img">
     <img src={map} alt="map"/>
-   </div>
+   </div> */}
     </Col>
    </Row>
    
