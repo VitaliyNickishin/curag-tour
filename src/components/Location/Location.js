@@ -8,7 +8,7 @@ import {Col} from 'react-bootstrap'
 import SocialIcons from '../SocialIcons/SocialIcons'
 import Map from '../Map/Map'
 import {Fade, Bounce, Zoom, Roll, Flip} from 'react-reveal'
-import contactBg from '../../img/our-contacts/1.jpg'
+// import contactBg from '../../img/our-contacts/1.jpg'
 import './Location.sass'
 
 export default function Location() {
