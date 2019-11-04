@@ -5,7 +5,7 @@ import Home from './pages/Home/Home'
 import Company from './pages/Company/Company'
 import OurContacts from './pages/OurContacts/OurContacts'
 import Error from './pages/Error/Error'
-import Navbars from './components/Navbar/Navbars';
+import Header from './components/Header/Heder';
 import Footer from './components/Footer/Footer';
 // import { Breadcrumb } from 'react-bootstrap';
 
@@ -54,7 +54,7 @@ export default function App() {
         <Breadcrumb.Item href="/contacts" active>Contacts</Breadcrumb.Item>
       </Breadcrumb> */}
       
-      <Navbars />
+      <Header />
       <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/company" component={Company} />

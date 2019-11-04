@@ -2,21 +2,12 @@
 @import '../../colors.sass' 
 
 .contacts
- padding-top: 23px
- position: fixed
- top: 0
- right: 14%
  display: flex
- justify-content: flex-end
  align-items: center
- flex-wrap: wrap
- background-color: transparent
  +bold
  color: $secondGrey
- z-index: 999
  opacity: 0.8
- &-location
- &-phone
+ &__phone
   margin-left: 30px
   position: relative
   &:after
@@ -29,7 +20,7 @@
    color: $secondGrey
    &:hover
     text-decoration: none
- &-social
+ &__social
   margin-left: 135px
   width: 70px
   a
@@ -42,42 +33,20 @@
 
 @media screen and (max-width: 992px) 
  .contacts
-  // padding: 10px 
-  display: flex
-  
-  justify-content: center
-  flex-direction: column
-  align-items: center
-  // right: 0
-  &-location
-  &-phone
+  &__location
+   display: none
+  &__phone
    margin-left: 0
+   &:after
+    display: none
    a
     margin-left: 3px
-  &-social
-   margin-left: 0
+  &__social
+   // margin-left: 0
+   display: none
 
 @media screen and (max-width: 576px) 
  .contacts
-  font-size: 10px
-  &-location
-   img
-    width: 10px
-  &-phone
-   img
-    width: 10px
-  &-social
-   img
-    width: 16px
-@media screen and (max-width: 425px) 
- .contacts
-  font-size: 8px
-  &-location
-   img
-    width: 8px
-  &-phone
-   img
-    width: 8px
-  &-social
-   img
-    width: 16px
+  padding-top: 20px
+  right: 17%
+

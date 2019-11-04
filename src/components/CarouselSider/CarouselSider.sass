@@ -3,22 +3,18 @@
  
 .slider
  position: relative
-.carousel-control-prev-icon, .carousel-control-next-icon
- background-image: none
-
 
 .carousel
  &-item
   img
    height: 100vh
  &-caption
-  // left: 0
   text-align: left
-  top: 330px
-  left: 399px
+  top: 40%
+  // left: 21%
   &:after
    content: ''
-   width: 1352px
+   width: 1322px
    height: 228px
    background-color: $bgBunner
    background-image: linear-gradient(-264deg, rgba(15, 37, 71, 0.07) 0%, rgba(34, 51, 77, 0) 100%)
@@ -31,134 +27,44 @@
    margin-bottom: 41px
    +bold
    font-size: 30px
+   // кружки перелистывания
+ &-indicators
+  margin: 0
+  justify-content: left
+  left: 15%
+  bottom: 2%
+  li
+   margin-right: 9px
+   width: 15px
+   height: 15px
+   border-radius: 50%
+  .active
+   background-color: $mainYellow
+   // стрелки 
+ &-control-prev-icon, &-control-next-icon 
+  background-image: none
+ 
 
-
-
-// кружки перелистывания
-.carousel-indicators
- margin: 0
- justify-content: left
- left: 399px
- bottom: 26px
- li
-  margin-right: 9px
-  width: 15px
-  height: 15px
-  border-radius: 50%
- .active
-  background-color: $mainYellow
-
-
-@media screen and (max-width: 1620px) 
- .carousel-caption
-  top: 255px
-  left: 255px
-  
- .carousel-indicators
-  left: 255px
-  
 @media screen and (max-width: 1520px) 
- .carousel-caption
-  top: 255px
-  left: 204px
-  
- .carousel-indicators
-  left: 204px
-@media screen and (max-width: 1420px) 
- .carousel-caption
-  top: 255px
-  left: 157px
-  
- .carousel-indicators
-  left: 157px
-@media screen and (max-width: 1320px) 
- .carousel-caption
-  top: 255px
-  left: 105px
-  &:after
-   height: 200px
-  h3
-   margin-bottom: 20px
-  
- .carousel-indicators
-  left: 105px
-  bottom: 10px
-  
-@media screen and (max-width: 1200px) 
- .carousel-caption
-  top: 210px
-  left: 130px
-  
- .carousel-indicators
-  left: 130px
-
-@media screen and (max-width: 992px) 
- .carousel-caption
-  top: 135px
-  left: 149px
-  &:after
-   width: 0
-   height: 0
-   top: 0
-  h3
-   font-size: 25px
- .carousel-indicators
-  left: 149px
- .btn-offer
-  padding: 10px
+ .carousel
+  &-caption
+   h3
+    margin-bottom: 20px
+   &:after
+    display: none
+  &-item
+   img
+    object-fit: cover
 
 @media screen and (max-width: 850px) 
- .carousel-caption
-  top: 105px
-  left: 80px
- .carousel-indicators
-  left: 80px
-@media screen and (max-width: 768px) 
- .carousel-caption
-  top: 90px
-  left: 125px
- .carousel-indicators
-  left: 125px
-  li
-   margin-right: 5px
-   width: 8px
-   height: 8px
-@media screen and (max-width: 576px) 
- .carousel-caption
-  top: 50px
-  left: 14px
-  h3
-   margin-bottom: 10px
-   font-size: 16px
- .carousel-indicators
-  left: 14px
-  bottom: 0
-
- .btn-offer
-  padding: 5px
-  font-size: 8px
-  border-radius: 5px
+ .carousel
+  &-caption
+   top: 30%
 
 @media screen and (max-width: 425px) 
- .carousel-caption
-  top: 50px
-  left: 14px
-  h3
-   margin-bottom: 10px
-   font-size: 12px
- .carousel-indicators
-  left: 14px
-  bottom: 0
-  li
-   margin-right: 1px
- .btn-offer
-  padding: 5px
-  font-size: 6px
-  border-radius: 3px
-
-@media screen and (max-width: 375px) 
- .carousel-caption
-  padding: 5px
-  top: 43px
-  h3
-   margin-bottom: 0
+ .carousel
+  &-caption
+   top: 20%
+   h3
+    font-size: 24px
+  

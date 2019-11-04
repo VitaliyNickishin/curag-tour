@@ -1,19 +1,17 @@
 @import '../../colors.sass'  
 
 .navbars
- position: fixed
- top: 53px
- right: 12%
- z-index: 999
-
-
+ // под меню
 .navbar-collapse
- margin-left: 288px
+ //margin-left: 288px
  background-color: $mainYellow
  max-width: 760px
  min-height: 48px
  border-radius: 10px
  flex-grow: 0
+ // position: absolute
+ // top: 0
+ // right: 0
 
 .nav-items
  padding-left: 26px
@@ -50,16 +48,10 @@
  text-wrap: wrap
 
  //кнопка
-.navbar-toggler 
- position: absolute
- top: -40px
- right: -50px
+.navbar-toggler
  //пунуты подменю
 .dropdown-item
- 
- // padding: 15px
  color: $mainWhite
- // width: 239px
 @media screen and (min-width: 992px) 
  .navbar-collapse
   margin-left: 0
@@ -79,6 +71,8 @@
   border: 0
 
 @media screen and (max-width: 576px) 
+ .navbars
+  right: 15%
  .nav-link
   font-size: 10px
  .dropdown-menu

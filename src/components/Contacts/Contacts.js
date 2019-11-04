@@ -6,12 +6,12 @@ import SocialIcons from '../SocialIcons/SocialIcons'
 // import inst from '../../img/icons/instagram.png'
 import './Contacts.sass'
 
-export default function Contacts() {
+export default function Contacts({name}) {
  return (
-  <div className="contacts">
-   <Point name="contacts-location"/>
-   <Phone name="contacts-phone"/>
-   <SocialIcons name="contacts-social"/>
+  <div className={`contacts ${name}`}>
+   <Point name="contacts__location"/>
+   <Phone name="contacts__phone"/>
+   <SocialIcons name="contacts__social"/>
   </div>
  )
 }
